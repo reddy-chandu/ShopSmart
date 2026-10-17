@@ -1,0 +1,144 @@
+.admin-header {
+  position: fixed;
+  z-index: 1200;
+  inset: 0 0 auto;
+  display: flex;
+  height: 6.8rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.8rem;
+  color: #17251f;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e2ebe5;
+  backdrop-filter: blur(12px);
+}
+
+.admin-header__start,
+.admin-header__actions,
+.admin-header__brand,
+.admin-header__user,
+.admin-header__store-link,
+.admin-header__logout {
+  display: flex;
+  align-items: center;
+}
+
+.admin-header__start,
+.admin-header__actions {
+  gap: 1.8rem;
+}
+
+.admin-header__brand {
+  gap: 1rem;
+  color: #17251f;
+  font-size: 1.5rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.admin-header__brand small {
+  display: block;
+  margin-top: 0.1rem;
+  color: #718078;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.admin-header__brand-mark {
+  display: grid;
+  width: 3.7rem;
+  height: 3.7rem;
+  place-items: center;
+  color: #fff;
+  background: #087f59;
+  border-radius: 0.9rem;
+  font-size: 1.8rem;
+}
+
+.admin-header__menu {
+  display: none;
+}
+
+.admin-header__user {
+  gap: 0.8rem;
+  color: #34453b;
+  font-size: 1.3rem;
+  font-weight: 650;
+}
+
+.admin-header__avatar {
+  display: grid;
+  width: 3.5rem;
+  height: 3.5rem;
+  place-items: center;
+  color: #176b4d;
+  background: #e6f2e9;
+  border-radius: 50%;
+  font-size: 1.4rem;
+}
+
+.admin-header__store-link,
+.admin-header__logout {
+  gap: 0.7rem;
+  color: #476154;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.admin-header__logout {
+  padding: 0.9rem 1.2rem;
+  border: 1px solid #dce8df;
+  border-radius: 0.7rem;
+}
+
+.admin-header__menu svg,
+.admin-header__store-link svg,
+.admin-header__logout svg {
+  font-size: 1.7rem;
+}
+
+@media (max-width: 700px) {
+  .admin-header {
+    height: 6.2rem;
+    padding: 0 1.4rem;
+  }
+
+  .admin-header__menu {
+    display: grid;
+    width: 3.8rem;
+    height: 3.8rem;
+    place-items: center;
+    color: #314a3c;
+    background: #f1f6f2;
+    border: 0;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  .admin-header__start,
+  .admin-header__actions {
+    gap: 1rem;
+  }
+
+  .admin-header__store-link span,
+  .admin-header__user-name,
+  .admin-header__logout span,
+  .admin-header__brand small {
+    display: none;
+  }
+
+  .admin-header__logout {
+    width: 3.8rem;
+    height: 3.8rem;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .admin-header__brand-mark {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}

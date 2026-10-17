@@ -1,0 +1,86 @@
+.not-found-state {
+  display: flex;
+  width: min(100%, 68rem);
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  padding: 3rem 2rem;
+  color: #1b2b23;
+}
+
+.not-found-state__icon {
+  display: grid;
+  width: 6.4rem;
+  height: 6.4rem;
+  flex: 0 0 auto;
+  place-items: center;
+  color: #087f59;
+  background: #e5f3e9;
+  border: 1px solid #d4e7da;
+  border-radius: 50%;
+  font-size: 2.7rem;
+}
+
+.not-found-state__copy {
+  min-width: 0;
+}
+
+.not-found-state__eyebrow {
+  color: #087f59;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.not-found-state h2 {
+  margin: 0.45rem 0;
+  color: #1b2b23;
+  font-size: 2rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.not-found-state p {
+  margin: 0.5rem 0 0;
+  color: #68756e;
+  font-size: 1.4rem;
+  line-height: 1.55;
+}
+
+.not-found-state--error .not-found-state__icon {
+  color: #a13b2b;
+  background: #fff0ec;
+  border-color: #f4d4ca;
+}
+
+.not-found-state--error .not-found-state__eyebrow {
+  color: #a13b2b;
+}
+
+.not-found-state__action {
+  display: inline-flex;
+  margin-top: 1.2rem;
+  color: #087f59;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+@media (max-width: 520px) {
+  .not-found-state {
+    align-items: flex-start;
+    gap: 1.3rem;
+    padding: 2rem 1rem;
+  }
+
+  .not-found-state__icon {
+    width: 4.8rem;
+    height: 4.8rem;
+    font-size: 2.1rem;
+  }
+
+  .not-found-state h2 {
+    font-size: 1.7rem;
+  }
+}

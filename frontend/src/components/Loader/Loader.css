@@ -1,0 +1,101 @@
+.shop-loader {
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100dvh;
+  place-items: center;
+  padding: 2rem;
+  overflow: hidden;
+  background-color: #f3f8f4;
+  background-image: radial-gradient(rgba(30, 99, 68, 0.11) 1px, transparent 1px);
+  background-size: 2.2rem 2.2rem;
+}
+
+.shop-loader__content {
+  display: flex;
+  width: min(100%, 34rem);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: shop-loader-enter 400ms ease-out both;
+}
+
+.shop-loader__mark {
+  position: relative;
+  display: grid;
+  width: 8rem;
+  height: 8rem;
+  place-items: center;
+  color: #087f59;
+  font-size: 3.4rem;
+}
+
+.shop-loader__ring {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #d4e7da;
+  border-top-color: #07895f;
+  border-right-color: #07895f;
+  border-radius: 50%;
+  animation: shop-loader-spin 1.15s linear infinite;
+}
+
+.shop-loader__brand {
+  margin: 2rem 0 0.5rem;
+  color: #087f59;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.shop-loader__label {
+  max-width: 100%;
+  margin: 0;
+  color: #1b2b23;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.shop-loader__track {
+  width: 15rem;
+  height: 0.35rem;
+  margin-top: 2rem;
+  overflow: hidden;
+  background: #dcebe0;
+  border-radius: 999px;
+}
+
+.shop-loader__track span {
+  display: block;
+  width: 42%;
+  height: 100%;
+  background: #07895f;
+  border-radius: inherit;
+  animation: shop-loader-progress 1.4s ease-in-out infinite;
+}
+
+@keyframes shop-loader-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shop-loader-progress {
+  0% { transform: translateX(-110%); }
+  55% { transform: translateX(140%); }
+  100% { transform: translateX(270%); }
+}
+
+@keyframes shop-loader-enter {
+  from { opacity: 0; transform: translateY(0.8rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shop-loader__content,
+  .shop-loader__ring,
+  .shop-loader__track span {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
+}

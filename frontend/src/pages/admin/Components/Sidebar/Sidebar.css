@@ -1,0 +1,114 @@
+.admin-sidebar {
+  position: fixed;
+  z-index: 1150;
+  inset: 6.8rem auto 0 0;
+  width: 25rem;
+  padding: 2.1rem 1.4rem;
+  overflow-y: auto;
+  background: #fff;
+  border-right: 1px solid #e2ebe5;
+}
+
+.admin-sidebar__workspace {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 0.8rem 2.1rem;
+  border-bottom: 1px solid #edf2ee;
+}
+
+.admin-sidebar__workspace-icon {
+  display: grid;
+  width: 3.7rem;
+  height: 3.7rem;
+  place-items: center;
+  color: #087f59;
+  background: #e9f4ec;
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.admin-sidebar__workspace strong,
+.admin-sidebar__workspace small {
+  display: block;
+}
+
+.admin-sidebar__workspace strong {
+  color: #25372d;
+  font-size: 1.35rem;
+}
+
+.admin-sidebar__workspace small {
+  margin-top: 0.3rem;
+  color: #7a8980;
+  font-size: 1.1rem;
+}
+
+.admin-nav {
+  display: grid;
+  gap: 0.35rem;
+  padding-top: 1.5rem;
+}
+
+.admin-nav__label {
+  margin: 1.4rem 0 0.4rem;
+  padding: 0 0.9rem;
+  color: #88958d;
+  font-size: 1.05rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admin-nav__link {
+  display: flex;
+  min-height: 4.3rem;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0.8rem 1rem;
+  color: #52635a;
+  border-radius: 0.7rem;
+  font-size: 1.35rem;
+  font-weight: 550;
+  text-decoration: none;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.admin-nav__link svg {
+  flex: 0 0 auto;
+  font-size: 1.8rem;
+}
+
+.admin-nav__link:hover,
+.admin-nav__link.is-active {
+  color: #087f59;
+  background: #eaf4ed;
+}
+
+@media (max-width: 900px) {
+  .admin-sidebar {
+    width: 22rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .admin-sidebar {
+    z-index: 1151;
+    top: 6.2rem;
+    width: min(82vw, 30rem);
+    transform: translateX(-105%);
+    transition: transform 200ms ease;
+    box-shadow: 1rem 0 3rem rgba(15, 39, 26, 0.08);
+  }
+
+  .admin-sidebar.admin-sidebar--open {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .admin-nav__link,
+  .admin-sidebar {
+    transition: none;
+  }
+}
