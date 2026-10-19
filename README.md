@@ -137,7 +137,7 @@ The API listens at `http://localhost:8000` by default. Its health endpoint is
 Create `frontend/.env` and point the frontend to the backend API:
 
 ```env
-VITE_API_URL=http://localhost:8000/api
+VITE_API_URL=http://localhost:8000
 ```
 
 In a second terminal, install dependencies and start the frontend:
